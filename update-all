@@ -1,0 +1,14 @@
+#!/bin/sh
+
+UPDATESTR='\nFetching Updates...\n'
+UPGRADESTR='\nInstalling Updates...\n'
+CLEANUPSTR='\nCleaning Up...\n'
+DONE='\nAll Done :)\n'
+
+echo "$UPDATESTR"
+sudo apt update
+echo "$UPGRADESTR"
+sudo apt upgrade -y
+echo "$CLEANUPSTR"
+sudo apt autoremove
+echo "$DONE"
